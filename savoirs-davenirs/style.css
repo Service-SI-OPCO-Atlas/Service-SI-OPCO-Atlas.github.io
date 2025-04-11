@@ -1,0 +1,384 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@font-face {
+  font-family: LeonCondBlack;
+  src: url(fonts/LeonCond-Black.otf);
+}
+@font-face {
+  font-family: CircularStdLight;
+  src: url(fonts/CircularStd-Light.otf);
+}
+@font-face {
+  font-family: CircularStdMedium;
+  src: url(fonts/CircularStd-Medium.otf);
+}
+@font-face {
+  font-family: CircularStdBlack;
+  src: url(fonts/CircularStd-Black.otf);
+}
+
+:root {
+  --dark-blue: #1B0271;
+  --medium-blue: #10005A;
+  --light-grey: #76849A;
+  --purple: #A325C0;
+  --green: #00D49B;
+  --blue: #00A7FF;
+}
+
+
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+
+.background {
+  position: absolute;
+  background: url(img/background.svg) no-repeat;
+  width: 425px;
+  height: 740px;
+  z-index: -100;
+}
+
+.background.top-right {
+  top: 0px;
+  right: 0px;
+  background-position-y: -59px;
+}
+
+.background.middle-left {
+  top: 920px;
+  left: 0px;
+  transform: rotate(180deg);
+}
+
+.background.middle-right {
+  top: 1450px;
+  right: 0px;
+}
+
+.background.bottom-left {
+  top: 2200px;
+  left: 0px;
+  transform: rotate(180deg);
+}
+
+.main {
+  margin: 57px;
+  margin-bottom: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.logo {
+}
+
+.button {
+  cursor: pointer;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.intro .left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 500px;
+}
+
+.intro .left h1 {
+  font-family: LeonCondBlack;
+  font-size: 36px;
+  text-transform: uppercase;
+  color: var(--dark-blue);
+  line-height: 1.1em;
+}
+
+.intro .left p {
+  font-family: CircularStdLight;
+  font-size: 18px;
+  color: var(--light-grey);
+  line-height: 1.5em;
+}
+
+.intro .right {
+  margin-right: 80px;
+}
+
+.intro .right img {
+  width: 662px;
+}
+
+.color-panels {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.color-panel {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-family: CircularStdMedium;
+  font-size: 20px;
+  color: white;
+  width: 411px;
+  height: 209px;
+  border-radius: 20px;
+  box-shadow: 1px 4px 10.1px 1px #00000026;
+  padding: 48px;
+  line-height: 1.5em;
+}
+
+.color-panel.purple {
+  background-color: var(--purple);
+}
+
+.color-panel.green {
+  margin-top: 50px;
+  background-color: var(--green);
+}
+
+@media only screen and (max-width: 1387px) {
+  .color-panel.green {
+    margin-top: 0px;
+  }
+}
+
+
+.color-panel.blue {
+  background-color: var(--blue);
+}
+
+.activation {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 39px;
+  box-shadow: 1px 4px 10.1px 1px #00000026;
+  padding: 48px;
+  gap: 20px;
+  padding: 60px;
+  background: white url(img/100-percents.svg) no-repeat 50px 10px;
+}
+
+.activation h2 {
+  font-family: LeonCondBlack;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: var(--dark-blue);
+}
+
+.activation p {
+  font-family: CircularStdMedium;
+  font-size: 21px;
+  color: var(--dark-blue);
+  width: 44%;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+.activation p.note {
+  font-family: CircularStdLight;
+  font-size: 15px;
+}
+.activation p.note a {
+  color: var(--dark-blue);
+}
+
+.contenus {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.contenus h2 {
+  font-family: LeonCondBlack;
+  font-size: 36px;
+  text-transform: uppercase;
+  color: var(--dark-blue);
+  text-align: center;
+}
+
+.white-panels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 0 30px;
+}
+
+.white-panel {
+  width: 358px;
+  height: 257px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 1px 4px 10.1px 1px #00000026;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.white-panel img {
+  width: 128px;
+}
+
+.white-panel h3 {
+  font-family: CircularStdMedium;
+  font-size: 24px;
+  color: var(--medium-blue);
+}
+
+.white-panel .line {
+  width: 45px;
+  height: 4px;
+  background-color: var(--purple);
+  border-radius: 25px;
+}
+
+.experience {
+  margin-top: 50px;
+  display: flex;
+  gap: 100px;
+  align-items: center;  
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.experience img {
+}
+
+.experience .detail {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 650px;
+}
+
+.experience .detail h2 {
+  font-family: LeonCondBlack;
+  font-size: 36px;
+  text-transform: uppercase;
+  color: var(--dark-blue);
+  line-height: 1.1em;
+  text-align: right;
+}
+.experience .detail ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: CircularStdLight;
+  font-size: 18px;
+  color: var(--light-grey);
+  line-height: 1.25em;
+  text-align: right;
+  list-style: disc inside;
+}
+
+.boite-a-outils {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  background-color: var(--purple);
+  border-radius: 39px;
+  align-items: center;
+  padding: 50px;
+  margin-top: 50px;
+}
+
+.boite-a-outils h2 {
+  font-family: LeonCondBlack;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: white;
+  line-height: 1.1em;
+  text-align: center;
+}
+
+.boite-a-outils .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.footer {
+  margin-top: 50px;
+  background: linear-gradient(90deg, rgba(16, 0, 90, 1) 0%, rgba(0, 0, 170, 1) 100%);
+  display: flex;
+  justify-content: flex-end;
+  padding: 57px;
+  padding-bottom: 100px;
+  flex-wrap: wrap;
+}
+
+.footer .logo {
+  display: flex;
+  width: 232px;
+  flex-direction: column;
+  gap:16px;
+  margin-right: auto;
+}
+
+.footer .logo img {
+  width: 232px;
+}
+
+.footer .logo p {
+  font-family: CircularStdLight;
+  font-size: 12px;
+  color: white;
+  line-height: 1.25em;
+}
+
+.footer .decouvrir, .footer .qui-sommes-nous {
+  display: flex;
+  width: 232px;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer .decouvrir h3, .footer .qui-sommes-nous h3 {
+  font-family: LeonCondBlack;
+  font-size: 27px;
+  text-transform: uppercase;
+  color: white;
+  padding-bottom: 16px;
+}
+
+.footer .decouvrir p, .footer .qui-sommes-nous p {
+  font-family: CircularStdMedium;
+  font-size: 18px;
+  color: white;
+}
+
+.footer .qui-sommes-nous .social {
+  display: flex;
+  gap: 16px;
+}
+
+
+
